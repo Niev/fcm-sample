@@ -7,17 +7,39 @@ function onLoad() {
         messagingSenderId: "459679739026"
     };
     firebase.initializeApp(config);
-    const messaging = firebase.messaging()
+
+    const messaging = firebase.messaging();
+
+    if (Notification.permission === 'granted')   {
+        subscribe()
+    }
+
+    document.querySelector("#btn").addEventListener("click", function () {
+        subscribe()
+    })
 
     document.querySelector("form").addEventListener("submit", function () { return false })
 
-    document.querySelector("#btn").addEventListener("click", function () {
-
-    })
 
     document.querySelector("#msg").addEventListener("change", function () {
 
     })
+
+    function subscribe() {
+        messaging.requestPermission()
+            .then(function () {
+                messaging.getToken().then(storeToken())
+            })
+    }
+
 }
+
+function storeToken () {
+    return new Promise(function (token) {
+        window.localStorage.setItem('token', token)
+    })
+}
+
+
 
 document.addEventListener("DOMContentLoaded", onLoad);
