@@ -4,23 +4,17 @@
         <title>Notifications chat</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="./index.css"/>
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/yeti/bootstrap.min.css" integrity="sha384-dg40NlQ5h8dcgfP8X7gQ0ZT5Xay9rgtJY6itRjTyGzR3zAHzvY/FzcbdKL2lJjgT" crossorigin="anonymous">
 
         <script src="//www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
         <script src="//www.gstatic.com/firebasejs/5.8.1/firebase-messaging.js"></script>
+        <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script>
-            let config = {
-                apiKey: "AAAAawcMLJI:APA91bGRLb3z9ni-GFydKVx1U5B1bpKN151v4jbB98yZBjTB_4tPsZ-K-p14Kj3fdGUeQAxCpAdkOtp_ayKs1Z1N7DfAcVq0ay-s25yeyR-n628nTHhH3h0u_30VriuC00pRTsp6ahrz",
-                authDomain: "niev.github.io",
-                databaseURL: "https://awesome-push-app.firebaseio.com",
-                projectId: "awesome-push-app",
-                messagingSenderId: "459679739026"
-            };
-            firebase.initializeApp(config);
-        </script>
-        </head>
+
+        <script src="index.js"></script>
+    </head>
 
     <body>
         <div class="container">
@@ -37,7 +31,7 @@
                     </div>
 
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-primary">Подписаться на сообщения чата</button>
+                        <button id="btn" type="button" class="btn btn-primary">Подписаться на сообщения чата</button>
                     </div>
                 </div>
             </div>
